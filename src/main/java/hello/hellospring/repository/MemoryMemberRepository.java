@@ -36,5 +36,9 @@ public class MemoryMemberRepository implements MemberRepository{
     public List<Member> findAll() { // 실무에선 리스트가 많이 쓰인다
         return new ArrayList<>(store.values());
     }
+
+    public void clearStore(){
+        store.clear();
+    }
 }
 // 작성한 코드가 잘 수행되는지 알고싶다? -> 테스트 케이스
